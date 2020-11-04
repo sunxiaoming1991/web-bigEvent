@@ -1,6 +1,14 @@
 //每次在调用$.get() $.post()  $.ajax()的时候，都会先隐式调用ajaxPrefilter这个函数。在这个函数中我们可以拿到我们给ajax提供的配置对象
 
 $.ajaxPrefilter(function (options) {
+
+    // if (!localStorage.getItem('token')) {
+    //     location.href = 'login.html'
+    //     return
+    // }
+
+
+
     // console.log(options.url)
     options.url = 'http://ajax.frontend.itheima.net' + options.url
     // return options.url
